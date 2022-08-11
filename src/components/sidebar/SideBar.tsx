@@ -21,8 +21,8 @@ const SideBar = () => {
       </div>
 
       <style.Content style={{justifyContent: 'space-around', alignItems:'center'}}>
-        <style.DialogContent>
-          
+        <style.DialogContent >
+          <List options={options2}/>
         </style.DialogContent>
       </style.Content>
     </style.Content>

@@ -9,16 +9,16 @@ interface Props {
 
 
 
-const List = ({ options, position }: Props) => {
+const List = ({ options, position = -1 }: Props) => {
 
     return (
-        <style.List>
+        <style.List flag={position}>
             {
                 options.map((item, index) => {
                     const color = position === index ? BaseColor.whiteColor : BaseColor.inactiveGrayColor
                     
                     return (
-                        <style.Item>
+                        <style.Item >
                             {
                                 !position &&
                                 <style.SelectRectangule color={position === index ? BaseColor.whiteColor : 'transparent'} />

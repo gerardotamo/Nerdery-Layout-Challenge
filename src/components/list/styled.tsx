@@ -1,8 +1,11 @@
 import styled from "styled-components";
 
-export const List = styled.li`
-    margin-top: 33px;
+export const List = styled("li")<{flag: number}>`
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: ${props => props.flag ? "15%" : "0px"};
+    margin-top: ${props => props.flag ? "15%" : "33px"};
 `
 
 export const Item = styled.ul`

@@ -7,7 +7,7 @@ const Text = styled('p')<{color: string, size: number   }>`
     font-style: normal;
     font-weight: 400;
     font-size: ${props => props.size}px;
-
+    margin: 3px;
 `;
 
 
