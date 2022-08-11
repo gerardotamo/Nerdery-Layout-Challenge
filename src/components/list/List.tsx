@@ -1,5 +1,5 @@
 import { BaseColor } from '../../config/color'
-import { Text } from '../../config/Text'
+import { Text } from '../Text/Text'
 import * as style from './styled'
 
 interface Props {
