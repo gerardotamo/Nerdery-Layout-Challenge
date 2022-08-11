@@ -22,7 +22,7 @@ const SideBar = () => {
 
       <style.Content style={{justifyContent: 'space-around', alignItems:'center'}}>
         <style.DialogContent>
-
+          
         </style.DialogContent>
       </style.Content>
     </style.Content>

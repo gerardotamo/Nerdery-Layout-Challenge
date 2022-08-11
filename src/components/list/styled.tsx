@@ -14,7 +14,7 @@ export const Item = styled.ul`
     margin: 0px;
 `;
 
-export const SelectRectangule = styled('div')<{ color: string }>`
+export const SelectRectangule = styled('div') <{ color: string }>`
     background-color: ${props => props.color};
     width: 7px;
     height: 44px;
@@ -23,3 +23,10 @@ export const SelectRectangule = styled('div')<{ color: string }>`
     margin-right: 25px;
 `;
 
+export const UlRectangule = styled('div') <{ color: string }>`
+    box-sizing: border-box;
+    width: 15px;
+    height: 15px;
+    border: 1px solid ${props => props.color};
+    margin-right: 10px;
+`;

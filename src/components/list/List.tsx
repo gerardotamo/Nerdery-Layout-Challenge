@@ -4,20 +4,27 @@ import * as style from './styled'
 
 interface Props {
     options: string[],
-    position: number
+    position?: number,
 }
 
 
 
 const List = ({ options, position }: Props) => {
+
     return (
         <style.List>
             {
                 options.map((item, index) => {
+                    const color = position === index ? BaseColor.whiteColor : BaseColor.inactiveGrayColor
+                    
                     return (
                         <style.Item>
-                            <style.SelectRectangule color={position === index ? BaseColor.whiteColor : 'transparent'}/>
-                            <Text color={position === index ? BaseColor.whiteColor: BaseColor.inactiveGrayColor} size={10}>
+                            {
+                                !position &&
+                                <style.SelectRectangule color={position === index ? BaseColor.whiteColor : 'transparent'} />
+                            }
+                            <style.UlRectangule color={!position ? color : 'white'} />
+                            <Text color={!position ? color : BaseColor.secondaryGrayColor } size={10}>
                                 {item}
                             </Text>
                         </style.Item>
