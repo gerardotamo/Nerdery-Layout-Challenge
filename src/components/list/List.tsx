@@ -1,4 +1,5 @@
 import { BaseColor } from '../../config/color'
+import { Rectangule } from '../Rectangule/Rectangule'
 import { Text } from '../Text/Text'
 import * as style from './styled'
 
@@ -23,7 +24,7 @@ const List = ({ options, position = -1 }: Props) => {
                                 !position &&
                                 <style.SelectRectangule color={position === index ? BaseColor.whiteColor : 'transparent'} />
                             }
-                            <style.UlRectangule color={!position ? color : 'white'} />
+                            <Rectangule backgroundColor='transparent' borderColor={!position ? color : 'white'} />
                             <Text color={!position ? color : BaseColor.secondaryGrayColor } size={10}>
                                 {item}
                             </Text>
