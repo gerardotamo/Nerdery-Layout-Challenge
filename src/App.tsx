@@ -1,11 +1,14 @@
 import './App.css';
+import Aside from './components/aside/Aside';
+import SideBar from './components/sidebar/SideBar';
+import Home from './pages/home/Home';
 function App() {
 
   return (
     <div className='wrapper'>
-      <div>UNO</div>
-      <div>DOS</div>
-      <div>TRuE</div>
+      <SideBar />
+      <Home />
+      <Aside />
     </div>
 
   );

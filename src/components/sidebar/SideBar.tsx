@@ -1,7 +1,10 @@
+import * as style from './syled'
 
 const SideBar = () => {
   return (
-    <div>SideBar</div>
+    <style.Content>
+      
+    </style.Content>
   )
 }
 
