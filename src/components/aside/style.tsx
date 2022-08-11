@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BaseColor } from "../../config/color";
 
 export const Content = styled("div") <{ color: string }>`
     display: grid;
@@ -36,3 +37,12 @@ export const Avatar = styled.img`
     border-radius: 15.5px;
     margin-left: 5px;
 `
+
+export const CircleWhite = styled.div`
+    background-color: ${BaseColor.whiteColor};
+    height: 105px;
+    width: 105px;
+    border-radius: 52.5px;
+    position: absolute;
+    top: 40px;
+`;
