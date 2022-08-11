@@ -1,5 +1,8 @@
 import { useState } from 'react';
+import { BaseColor } from '../../config/color';
 import { Divider } from '../../config/Divider';
+import { Button } from '../Button/Button';
+import { Text } from '../Text/Text';
 import List from '../list/List';
 import * as style from './syled'
 
@@ -20,11 +23,18 @@ const SideBar = () => {
         <Divider />
       </div>
 
-      <style.Content style={{justifyContent: 'space-around', alignItems:'center'}}>
+      <div style={{ alignItems: 'center',
+                display: 'flex',
+                flexDirection: 'column', justifyContent: 'space-around', marginBottom: '15px' }}>
         <style.DialogContent >
-          <List options={options2}/>
+          <List options={options2} />
         </style.DialogContent>
-      </style.Content>
+        <Button heigth='30px' width='67%' color={BaseColor.secondaryColor}>
+          <Text color={BaseColor.whiteColor} size={10}>
+            Create New
+          </Text>
+        </Button>
+      </div>
     </style.Content>
   )
 }
