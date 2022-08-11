@@ -20,8 +20,10 @@ const SideBar = () => {
         <Divider />
       </div>
 
-      <style.Content>
-        
+      <style.Content style={{justifyContent: 'space-around', alignItems:'center'}}>
+        <style.DialogContent>
+
+        </style.DialogContent>
       </style.Content>
     </style.Content>
   )
