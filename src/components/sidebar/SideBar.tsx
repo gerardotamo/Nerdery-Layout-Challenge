@@ -29,7 +29,7 @@ const SideBar = () => {
         <style.DialogContent >
           <List options={options2} />
         </style.DialogContent>
-        <Button heigth='30px' width='67%' color={BaseColor.secondaryColor}>
+        <Button heigth='30px' width='67%' color={BaseColor.orangePrimaryColor}>
           <Text color={BaseColor.whiteColor} size={10}>
             Create New
           </Text>

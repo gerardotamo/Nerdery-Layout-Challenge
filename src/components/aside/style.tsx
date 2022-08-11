@@ -25,6 +25,11 @@ export const ViewDetail = styled.div`
     padding-right: 15%;
 `;
 
+export const ViewPie = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
+
 export const Avatar = styled.img`
     width: 31px;
     height: 31px;

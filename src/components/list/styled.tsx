@@ -4,7 +4,7 @@ export const List = styled("li")<{flag: number}>`
     list-style: none;
     display: flex;
     flex-direction: column;
-    margin: ${props => props.flag ? "15%" : "0px"};
+    margin: ${props => props.flag ? "12px" : "0px"};
     margin-top: ${props => props.flag ? "15%" : "33px"};
 `
 
