@@ -5,6 +5,7 @@ export const Rectangule = styled("div") <{
     backgroundColor: string,
     height: number,
     width: number,
+    borderRadius: number  
 }>`
     box-sizing: border-box;
     width: ${props => props.width}px;
@@ -12,4 +13,5 @@ export const Rectangule = styled("div") <{
     border: 1px solid ${props => props.borderColor};
     margin-right: 10px;
     background-color: ${props => props.backgroundColor};
+    border-radius: ${props => props.borderRadius}px;
 `;
