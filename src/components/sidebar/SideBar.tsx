@@ -20,7 +20,7 @@ const SideBar = () => {
       <div>
         <style.ColorPalette />
         <List options={options} position={position} />
-        <Divider />
+        <Divider color={BaseColor.dividerPrimaryColor} />
       </div>
 
       <div style={{ alignItems: 'center',

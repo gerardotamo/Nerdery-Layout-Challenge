@@ -7,15 +7,22 @@ export const Content = styled("div") <{ color: string }>`
     grid-gap: 10px;
     height: 100%;
     background-color: ${props => props.color};
-    padding-left: 15%;
-    padding-right: 15%;
+    
 `;
 
 export const View = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;  
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+`;
+export const ViewDetail = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+    padding-right: 15%;
 `;
 
 export const Avatar = styled.img`

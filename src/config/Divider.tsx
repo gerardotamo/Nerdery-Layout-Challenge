@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const Divider = styled.div`
-    border: 1px solid #464C61;
+export const Divider = styled.div<{color: string}>`
+    border: 1px solid ${props => props.color};
 `;
