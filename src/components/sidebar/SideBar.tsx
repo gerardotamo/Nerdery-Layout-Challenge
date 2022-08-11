@@ -1,3 +1,4 @@
+import List from '../list/List';
 import * as style from './syled'
 
 const SideBar = () => {
@@ -11,6 +12,7 @@ const SideBar = () => {
     <style.Content>
       <div>
         <style.ColorPalette />
+        <List options={options}/>
       </div>
       <div>
 

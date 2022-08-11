@@ -1,3 +1,5 @@
+import { BaseColor } from '../../config/color'
+import { Text } from '../../config/Text'
 import * as style from './styled'
 interface Props {
     options: string[]
@@ -8,9 +10,9 @@ const List = ({ options }: Props) => {
             {
                 options.map((item, index) => {
                     return (
-                        <>
-                        {item}
-                        </>
+                        <Text color={BaseColor.grayColor} size={10}>
+                            {item}
+                        </Text>
                     )
                 })
             }
