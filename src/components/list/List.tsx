@@ -1,18 +1,26 @@
 import { BaseColor } from '../../config/color'
 import { Text } from '../../config/Text'
 import * as style from './styled'
+
 interface Props {
-    options: string[]
+    options: string[],
+    position: number
 }
-const List = ({ options }: Props) => {
+
+
+
+const List = ({ options, position }: Props) => {
     return (
         <style.List>
             {
                 options.map((item, index) => {
                     return (
-                        <Text color={BaseColor.grayColor} size={10}>
-                            {item}
-                        </Text>
+                        <style.Item>
+                            <style.SelectRectangule color={position === index ? BaseColor.whiteColor : 'transparent'}/>
+                            <Text color={position === index ? BaseColor.whiteColor: BaseColor.inactiveGrayColor} size={10}>
+                                {item}
+                            </Text>
+                        </style.Item>
                     )
                 })
             }

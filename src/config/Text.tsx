@@ -6,7 +6,7 @@ const Text = styled('p')<{color: string, size: number   }>`
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: ${props => props.size} + "px";
+    font-size: ${props => props.size}px;
 
 `;
 
