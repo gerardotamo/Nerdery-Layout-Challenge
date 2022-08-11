@@ -1,6 +1,7 @@
 import { BaseColor } from '../../config/color';
 import { Divider } from '../../config/Divider';
 import { Data } from '../../interfaces/data';
+import { Button } from '../Button/Button';
 import { PieGrafic } from '../PieGrafic/PieGrafic';
 import { Rectangule } from '../Rectangule/Rectangule';
 import { StorageDetail } from '../StorageDetail/StorageDetail';
@@ -52,7 +53,7 @@ const Aside = () => {
           <PieGrafic data={data} />
           <Rectangule height={105} width={105} borderRadius={52.5}
             backgroundColor={BaseColor.whiteColor} borderColor={'transparent'}
-            style={{position: 'absolute',top: "20%", left:'20%' }}
+            style={{ position: 'absolute', top: "20%", left: '20%' }}
           />
           <div style={{ top: "65px", left: "70px", position: "absolute", alignItems: 'center' }}>
             <style.ViewPie style={{ alignItems: 'center' }}>
@@ -84,7 +85,23 @@ const Aside = () => {
           }
         </div>
       </style.ViewDetail>
-          
+
+      <style.UpgradeContent>
+        <style.ViewUpgrade>
+          <style.GradiantRectangule />
+          <Text size={12} color={BaseColor.primaryColor} style={{margin:"0px", marginTop: "10px"}}>
+            Buy more space now!
+          </Text>
+          <Text size={8} color={BaseColor.inactiveGrayColor} style={{margin:"0px", marginBottom: "10px"}}>
+            Upgrade to cloud premium
+          </Text>
+          <Button color={BaseColor.orangePrimaryColor} heigth={"20%"} width={"70%"}>
+            <Text size={10} color={BaseColor.whiteColor}>
+              Upgrade Account
+            </Text>
+          </Button>
+        </style.ViewUpgrade>
+      </style.UpgradeContent>
 
     </style.Content>
   )
