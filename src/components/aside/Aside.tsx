@@ -50,7 +50,10 @@ const Aside = () => {
         <Text color={BaseColor.primaryColor} size={20}> Storage</Text>
         <div style={{ display: "flex", position: 'relative', flexDirection: 'column', alignItems: 'center' }}>
           <PieGrafic data={data} />
-          <style.CircleWhite />
+          <Rectangule height={105} width={105} borderRadius={52.5}
+            backgroundColor={BaseColor.whiteColor} borderColor={'transparent'}
+            style={{position: 'absolute',top: "20%", left:'20%' }}
+          />
           <div style={{ top: "65px", left: "70px", position: "absolute", alignItems: 'center' }}>
             <style.ViewPie style={{ alignItems: 'center' }}>
               <Text color={BaseColor.primaryColor} size={24} style={{ margin: '0px' }}>
@@ -65,10 +68,10 @@ const Aside = () => {
             {sum} GB of 500 GB used
           </Text>
         </div>
-        <div style={{ border: '1px solid black' }}>
+        <div>
           {
             data.sort(compare).map((item, index) => {
-              const flag: boolean = index === data.length -1;
+              const flag: boolean = index === data.length - 1;
               return (
                 <>
                   <StorageDetail data={item} key={index} />
@@ -81,8 +84,7 @@ const Aside = () => {
           }
         </div>
       </style.ViewDetail>
-
-
+          
 
     </style.Content>
   )

@@ -37,12 +37,8 @@ export const Avatar = styled.img`
     border-radius: 15.5px;
     margin-left: 5px;
 `
-
-export const CircleWhite = styled.div`
+export const UpgradeContent = styled.div`
+    width: 100%;
+    height: 100%;
     background-color: ${BaseColor.whiteColor};
-    height: 105px;
-    width: 105px;
-    border-radius: 52.5px;
-    position: absolute;
-    top: 40px;
 `;
