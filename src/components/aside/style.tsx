@@ -44,17 +44,6 @@ export const UpgradeContent = styled.div`
     justify-content: center;
     align-items: center;
 `;
-export const ViewUpgrade = styled.div`
-    background-color: ${BaseColor.whiteColor};
-    width: 100%;
-    height: 90%;
-    margin-bottom: 20px;
-    border-radius: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-`;
 
 export const GradiantRectangule = styled.div`
     background: linear-gradient(270.15deg, #689FF8 0.15%, #FF6860 54.7%, #FF9F00 99.9%);

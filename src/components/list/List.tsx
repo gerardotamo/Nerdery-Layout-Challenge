@@ -25,7 +25,7 @@ const List = ({ options, position = -1 }: Props) => {
                                 <style.SelectRectangule color={position === index ? BaseColor.whiteColor : 'transparent'} />
                             }
                             <Rectangule backgroundColor='transparent' borderRadius={1}
-                                borderColor={!position ? color : 'white'} height={15} width={15} />
+                                borderColor={!position ? color : 'white'} height={"15px"} width={"15px"} />
                             <Text color={!position ? color : BaseColor.secondaryGrayColor} size={10}>
                                 {item}
                             </Text>

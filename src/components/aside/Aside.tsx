@@ -37,9 +37,9 @@ const Aside = () => {
       <style.View>
         <div style={{ display: 'flex' }}>
           <Rectangule backgroundColor={BaseColor.grayColor} borderRadius={1}
-            borderColor='transparent' height={15} width={15} />
+            borderColor='transparent' height={"15px"} width={"15px"} />
           <Rectangule backgroundColor={BaseColor.grayColor}
-            borderColor='transparent' height={15} width={15} borderRadius={1} />
+            borderColor='transparent' height={"15px"} width={"15px"} borderRadius={1} />
         </div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
           <Text color={BaseColor.primaryColor} size={12}>Name</Text>
@@ -51,9 +51,9 @@ const Aside = () => {
         <Text color={BaseColor.primaryColor} size={20}> Storage</Text>
         <div style={{ display: "flex", position: 'relative', flexDirection: 'column', alignItems: 'center' }}>
           <PieGrafic data={data} />
-          <Rectangule height={105} width={105} borderRadius={52.5}
+          <Rectangule height={"105px"} width={"105px"} borderRadius={52.5}
             backgroundColor={BaseColor.whiteColor} borderColor={'transparent'}
-            style={{ position: 'absolute', top: "20%", left: '20%' }}
+            style={{ position: 'absolute', top: "19%", left: '20.8%' }}
           />
           <div style={{ top: "65px", left: "70px", position: "absolute", alignItems: 'center' }}>
             <style.ViewPie style={{ alignItems: 'center' }}>
@@ -87,7 +87,10 @@ const Aside = () => {
       </style.ViewDetail>
 
       <style.UpgradeContent>
-        <style.ViewUpgrade>
+        <Rectangule backgroundColor={BaseColor.whiteColor} borderColor='transparente' 
+          borderRadius={18} height='90%' width='100%' style={{ display:'flex', 
+          alignItems:'center', flexDirection:'column', justifyContent:'center'}}
+        >
           <style.GradiantRectangule />
           <Text size={12} color={BaseColor.primaryColor} style={{margin:"0px", marginTop: "10px"}}>
             Buy more space now!
@@ -100,7 +103,7 @@ const Aside = () => {
               Upgrade Account
             </Text>
           </Button>
-        </style.ViewUpgrade>
+        </Rectangule>
       </style.UpgradeContent>
 
     </style.Content>

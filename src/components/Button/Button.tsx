@@ -7,4 +7,7 @@ export const Button = styled("button")<{heigth: string, width: string, color: st
     border: 0px;
     border-radius: 7px;
     border-color: transparent;
+
+    cursor: pointer;
+    
 `; 

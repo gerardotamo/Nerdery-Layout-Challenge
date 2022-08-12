@@ -14,7 +14,7 @@ export const StorageDetail = ({ data }: Props) => {
         <style.Content>
             <style.Content style={{ marginBottom: '9px', marginTop: '8px' }}>
                 <Rectangule backgroundColor={data.color} borderRadius={8}
-                    borderColor={data.color} height={28} width={28}
+                    borderColor={data.color} height={"28px"} width={"28px"}
                 />
                 <div style={{display:'flex', flexDirection:'column' }}>
                     <Text color={BaseColor.primaryColor} size={10} style={{margin:"0px"}}>
