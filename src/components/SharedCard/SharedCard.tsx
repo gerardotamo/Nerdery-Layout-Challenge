@@ -34,9 +34,6 @@ export const SharedCard = ({ data }: Props) => {
             borderRadius={12} height="20%" width="29%" style={{ flex: "0 0 29%", marginRight: '4%' }}
         >
             <style.Content>
-                <style.View style={{position:'absolute', right: '5px', cursor:'pointer'}}>
-                    <BiDotsVertical color={BaseColor.inactiveGrayColor} />
-                </style.View>
                 <style.View style={{
                     flexDirection: 'column',
                     justifyContent: 'space-between',
