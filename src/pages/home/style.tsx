@@ -28,3 +28,8 @@ export const TextInput = styled.input`
         font-size: 10px;
     }
 `;
+
+export const View = styled.div`
+    display: flex;
+   
+`;

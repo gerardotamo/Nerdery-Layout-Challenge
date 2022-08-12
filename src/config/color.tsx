@@ -2,7 +2,8 @@ const GreenColor = {
     greenPrimaryColor: "#4AC29D"
 }
 const OrangeColor = {
-    orangePrimaryColor: "#FF9F00"
+    orangePrimaryColor: "#FF9F00",
+    shadowOrangePrimaryColor: "#FFD999"
 }
 const BlueColor = {
     bluePrimaryColor: "#689FF8"
@@ -16,6 +17,7 @@ const BaseColor = {
     whiteColor: "#FFFFFF",
     grayColor: "#C4C4C4",
     inactiveGrayColor: "#858A9D",
+    inactiveSecondaryGrayColor: "#9D9FAF",
     secondaryGrayColor: "#BEC0C8",
     accentGrayColor: "#BCBECA",
     fieldColor: "#F5F6FC",
