@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { BaseColor } from "../../config/color";
 
-export const Content = styled("div") <{ color: string }>`
+export const Content = styled("div")`
     display: grid;
     grid-template-rows: 1.2fr 1px 5fr 4fr;
     grid-template-columns: auto;
     grid-gap: 10px;
     height: 100%;
-    background-color: ${props => props.color};
+    background-color: ${BaseColor.fieldColor};
     
 `;
 
