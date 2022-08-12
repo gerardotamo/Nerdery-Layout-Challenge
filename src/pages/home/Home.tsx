@@ -1,22 +1,25 @@
 import { RecentlyCard } from '../../components/RecentlyCard/RecentlyCard';
+import { RecentlyCardFile } from '../../components/RecentlyFilesCard/RecentlyCardFile';
 import { Rectangule } from '../../components/Rectangule/Rectangule';
 import { Text } from '../../components/Text/Text';
 import { BaseColor } from '../../config/color';
+import { Recently } from '../../interfaces/recently';
+import { RecentlyFiles } from '../../interfaces/recentlyFiles';
 import * as style from './style'
 
 
 const Home = () => {
 
-  const recentlyOpen = [
+  const recentlyOpen: Recently[] = [
     { id: 0, name: "App Proyect", created: "20.02.2020", open: 2 },
     { id: 1, name: "Project: fitbit", created: "28.02.2020", open: 2 },
     { id: 2, name: "Client Documents", created: "4.03.2020", open: 4 },
   ]
-  const recentlyFyles = [
+  const recentlyFyles: RecentlyFiles[] = [
     { id: 0, name: "Travel Landing Page", members: 5, last_modified: "Mar 8, 2020", color: BaseColor.orangePrimaryColor },
-    { id: 1, name: "True Photos", members: 12, last_modified: "Mar 8, 2020", color: BaseColor.greenPrimaryColor},
-    { id: 2, name: "Dashboard Structure", members: 10, last_modified: "Mar 9, 2020", color: BaseColor.redPrimaryColor},
-    { id: 3, name: "Character Illustration", members: 3, last_modified: "Mar 10, 2020", color: BaseColor.orangePrimaryColor},
+    { id: 1, name: "True Photos", members: 12, last_modified: "Mar 8, 2020", color: BaseColor.greenPrimaryColor },
+    { id: 2, name: "Dashboard Structure", members: 10, last_modified: "Mar 9, 2020", color: BaseColor.redPrimaryColor },
+    { id: 3, name: "Character Illustration", members: 3, last_modified: "Mar 10, 2020", color: BaseColor.orangePrimaryColor },
   ]
 
   return (
@@ -57,13 +60,43 @@ const Home = () => {
           })
         }
       </style.View>
-      <style.View style={{justifyContent:'space-between'}}>
+      <style.View style={{ justifyContent: 'space-between' }}>
         <Text color={BaseColor.primaryColor} size={20}>
           Recent Files
         </Text>
         <Text color={BaseColor.primaryColor} size={12}>
           View All
         </Text>
+
+      </style.View>
+      <style.View>
+        <style.Table  cellSpacing={0}>
+          <tr>
+            <style.Th>
+              <Text color={BaseColor.inactiveGrayColor} size={12}>
+                Name
+              </Text>
+            </style.Th>
+            <style.Th>
+              <Text color={BaseColor.inactiveGrayColor} size={12}>
+                Members
+              </Text>
+            </style.Th>
+            <style.Th>
+              <Text color={BaseColor.inactiveGrayColor} size={12}>
+                Last Modified
+              </Text>
+            </style.Th>
+            <style.Th></style.Th>
+          </tr>
+          {
+            recentlyFyles.map((item) => {
+              return (
+                <RecentlyCardFile data={item} />
+              )
+            })
+          }
+        </style.Table>
       </style.View>
     </style.Content>
   )

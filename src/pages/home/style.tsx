@@ -33,3 +33,12 @@ export const View = styled.div`
     display: flex;
    
 `;
+
+export const Th = styled.th`
+    text-align: left;
+`;
+
+export const Table = styled.table`
+    width: 100%;
+    border-spacing: 0 10px;
+`
