@@ -3,6 +3,7 @@ import { BaseColor } from "../../config/color"
 import { Recently } from "../../interfaces/recently"
 import { Rectangule } from "../Rectangule/Rectangule"
 import { Text } from '../Text/Text'
+import {BiDotsVertical} from 'react-icons/bi'
 
 interface Props {
     data: Recently
@@ -41,6 +42,9 @@ export const RecentlyCard = ({ data }: Props) => {
             borderRadius={12} height="133px" width="29%" style={{ flex: "0 0 29%", marginRight: '4%' }}
         >
             <style.Content>
+                <style.View style={{position:'absolute', right: '5px', cursor:'pointer'}}>
+                    <BiDotsVertical />
+                </style.View>
                 <style.View style={{
                     flexDirection: 'column',
                     justifyContent: 'space-between',
