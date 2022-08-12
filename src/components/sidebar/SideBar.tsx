@@ -17,14 +17,19 @@ interface Aux {
   name: string,
   icon: IconType
 }
-const SideBar = () => {
-  const options:Aux[] = [
+
+interface Props {
+  position: number;
+  handleClick: (pos: number) => void
+}
+const SideBar = ({ position, handleClick }: Props) => {
+  const options: Aux[] = [
     { name: "Home", icon: ImHome },
-    { name: "My files", icon: ImFilesEmpty  },
-    { name: "Recent Files", icon: ImFileEmpty  },
-    { name: "Shared Filed", icon: GoFileSymlinkFile  },
-    { name: "Filed Request", icon: GoGitPullRequest  },
-    { name: "Trash", icon: GoTrashcan  },
+    { name: "My files", icon: ImFilesEmpty },
+    { name: "Recent Files", icon: ImFileEmpty },
+    { name: "Shared Filed", icon: GoFileSymlinkFile },
+    { name: "Filed Request", icon: GoGitPullRequest },
+    { name: "Trash", icon: GoTrashcan },
   ];
 
   const options2: Aux[] = [
@@ -34,13 +39,12 @@ const SideBar = () => {
     { name: "More", icon: CgMore },
   ];
 
-  const [position, setPosition] = useState<number>(0);
 
   return (
     <style.Content>
       <div>
         <style.ColorPalette />
-        <List options={options} position={position} />
+        <List options={options} position={position} handleClick={handleClick} />
         <Divider color={BaseColor.dividerPrimaryColor} />
       </div>
 

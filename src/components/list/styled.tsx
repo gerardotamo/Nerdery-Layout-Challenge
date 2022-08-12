@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const List = styled("li")<{flag: number}>`
+export const List = styled("li")<{flag: boolean}>`
     list-style: none;
     display: flex;
     flex-direction: column;

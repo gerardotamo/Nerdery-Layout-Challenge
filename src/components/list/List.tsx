@@ -10,27 +10,29 @@ interface Props {
         icon: IconType
     }[],
     position?: number,
+    handleClick?: (pos: number) => void
 }
 
 
 
-const List = ({ options, position = -1 }: Props) => {
+const List = ({ options, position = -1, handleClick = ()=>{} }: Props) => {
+    const flag: boolean = (position !== -1);
 
     return (
-        <style.List flag={position}>
+        <style.List flag={!flag}>
             {
-                options.map((item, index) => {
+                options.map((item, index:number) => {
                     const color = position === index ? BaseColor.whiteColor : BaseColor.inactiveGrayColor
 
                     return (
-                        <style.Item >
+                        <style.Item onClick={()=> handleClick(index)}>
                             {
-                                !position &&
+                               flag &&
                                 <style.SelectRectangule color={position === index ? BaseColor.whiteColor : 'transparent'} />
                             }
                             
-                            <item.icon  color={!position ? color : 'white'}  style={{marginRight: "5px"}}/>
-                            <Text color={!position ? color : BaseColor.secondaryGrayColor} size={10}>
+                            <item.icon  color={flag ? color : 'white'}  style={{marginRight: "5px"}}/>
+                            <Text color={flag ? color : BaseColor.secondaryGrayColor} size={10}>
                                 {item.name}
                             </Text>
                         </style.Item>
