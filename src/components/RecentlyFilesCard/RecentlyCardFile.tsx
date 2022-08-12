@@ -30,8 +30,8 @@ export const RecentlyCardFile = ({ data }: Props) => {
                     {data.last_modified}
                 </Text>
             </style.Td>
-            <style.Td>
-                    <BiDotsHorizontal color={BaseColor.inactiveGrayColor}/>
+            <style.Td >
+                    <BiDotsHorizontal color={BaseColor.inactiveGrayColor} style={{cursor:'pointer'}}/>
             </style.Td>
         </style.Tr>
     )

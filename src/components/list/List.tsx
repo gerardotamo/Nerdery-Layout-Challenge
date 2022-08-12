@@ -2,9 +2,13 @@ import { BaseColor } from '../../config/color'
 import { Rectangule } from '../Rectangule/Rectangule'
 import { Text } from '../Text/Text'
 import * as style from './styled'
+import { IconType } from 'react-icons/lib'
 
 interface Props {
-    options: string[],
+    options: {
+        name:string,
+        icon: IconType
+    }[],
     position?: number,
 }
 
@@ -24,10 +28,10 @@ const List = ({ options, position = -1 }: Props) => {
                                 !position &&
                                 <style.SelectRectangule color={position === index ? BaseColor.whiteColor : 'transparent'} />
                             }
-                            <Rectangule backgroundColor='transparent' borderRadius={1}
-                                borderColor={!position ? color : 'white'} height={"15px"} width={"15px"} />
+                            
+                            <item.icon  color={!position ? color : 'white'}  style={{marginRight: "5px"}}/>
                             <Text color={!position ? color : BaseColor.secondaryGrayColor} size={10}>
-                                {item}
+                                {item.name}
                             </Text>
                         </style.Item>
                     )

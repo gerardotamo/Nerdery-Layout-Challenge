@@ -4,6 +4,9 @@ import { BaseColor } from "../../config/color";
 export const Content = styled.div`
     background-color: ${BaseColor.fieldColor};
     padding: 3%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
 `;
 
 export const TextInput = styled.input`

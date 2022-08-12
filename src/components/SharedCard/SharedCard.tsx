@@ -31,13 +31,13 @@ export const SharedCard = ({ data }: Props) => {
 
     return (
         <Rectangule backgroundColor={BaseColor.whiteColor} borderColor="transparent"
-            borderRadius={12} height="20%" width="29%" style={{ flex: "0 0 29%", marginRight: '4%' }}
+            borderRadius={12} height="100%" width="29%" style={{ flex: "0 0 29%", marginRight: '4%' }}
         >
             <style.Content>
                 <style.View style={{
                     flexDirection: 'column',
                     justifyContent: 'space-between',
-                    height: "100%"
+                    height: "79px",
                 }}>
                     <style.View style={{
                         alignItems: 'center',
