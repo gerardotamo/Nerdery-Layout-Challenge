@@ -8,7 +8,7 @@ export const Tr = styled.tr`
 
 
 export const Td = styled.td`
-    padding: 10px;
+    padding: 0.5%;
     text-align: left;
     padding-left: 0px;
 

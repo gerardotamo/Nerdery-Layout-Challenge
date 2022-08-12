@@ -1,10 +1,12 @@
 import { RecentlyCard } from '../../components/RecentlyCard/RecentlyCard';
 import { RecentlyCardFile } from '../../components/RecentlyFilesCard/RecentlyCardFile';
 import { Rectangule } from '../../components/Rectangule/Rectangule';
+import { SharedCard } from '../../components/SharedCard/SharedCard';
 import { Text } from '../../components/Text/Text';
 import { BaseColor } from '../../config/color';
 import { Recently } from '../../interfaces/recently';
 import { RecentlyFiles } from '../../interfaces/recentlyFiles';
+import { Shared } from '../../interfaces/shared';
 import * as style from './style'
 
 
@@ -22,6 +24,12 @@ const Home = () => {
     { id: 3, name: "Character Illustration", members: 3, last_modified: "Mar 10, 2020", color: BaseColor.orangePrimaryColor },
   ]
 
+  const shared: Shared[] = [
+    { id: 0, name: "Landing Page", created: "20.02.2020", open: 2, colors: [BaseColor.greenPrimaryColor, BaseColor.redPrimaryColor] },
+    { id: 1, name: "Illustration Pack", created: "28.02.2020", open: 3, colors: [BaseColor.greenPrimaryColor, BaseColor.redPrimaryColor, BaseColor.orangePrimaryColor] },
+    { id: 2, name: "CV Design", created: "4.03.2020", open: 2, colors: [BaseColor.greenPrimaryColor, BaseColor.orangePrimaryColor] },
+  ]
+
   return (
     <style.Content>
       <Rectangule backgroundColor={BaseColor.whiteColor} borderColor='transparent'
@@ -36,7 +44,7 @@ const Home = () => {
 
       <style.View style={{
         justifyContent: 'space-between', alignItems: 'center',
-        marginBlock: '3%'
+        marginBlock: '1%'
       }}>
         <Text color={BaseColor.primaryColor} size={20}>
           Recently Used
@@ -60,7 +68,7 @@ const Home = () => {
           })
         }
       </style.View>
-      <style.View style={{ justifyContent: 'space-between' }}>
+      <style.View style={{ justifyContent: 'space-between', marginBlock: '1%' }}>
         <Text color={BaseColor.primaryColor} size={20}>
           Recent Files
         </Text>
@@ -70,7 +78,7 @@ const Home = () => {
 
       </style.View>
       <style.View>
-        <style.Table  cellSpacing={0}>
+        <style.Table cellSpacing={0}>
           <tr>
             <style.Th>
               <Text color={BaseColor.inactiveGrayColor} size={12}>
@@ -97,6 +105,24 @@ const Home = () => {
             })
           }
         </style.Table>
+      </style.View>
+
+      <style.View style={{ justifyContent: 'space-between' }}>
+        <Text color={BaseColor.primaryColor} size={20}>
+          Shared with me
+        </Text>
+        <Text color={BaseColor.primaryColor} size={12}>
+          View All
+        </Text>
+      </style.View>
+      <style.View style={{ flexFlow: 'row wrap' }}>
+        {
+          shared.map((item) => {
+            return (
+              <SharedCard data={item} />
+            )
+          })
+        }
       </style.View>
     </style.Content>
   )
