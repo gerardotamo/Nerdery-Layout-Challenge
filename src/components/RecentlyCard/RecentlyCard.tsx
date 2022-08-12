@@ -43,7 +43,7 @@ export const RecentlyCard = ({ data }: Props) => {
         >
             <style.Content>
                 <style.View style={{position:'absolute', right: '5px', cursor:'pointer'}}>
-                    <BiDotsVertical />
+                    <BiDotsVertical color={BaseColor.inactiveGrayColor} />
                 </style.View>
                 <style.View style={{
                     flexDirection: 'column',

@@ -33,7 +33,7 @@ const Aside = () => {
 
 
   return (
-    <style.Content color={BaseColor.fieldColor}>
+    <style.Content>
       <style.View>
         <div style={{ display: 'flex' }}>
           <Rectangule backgroundColor={BaseColor.grayColor} borderRadius={1}

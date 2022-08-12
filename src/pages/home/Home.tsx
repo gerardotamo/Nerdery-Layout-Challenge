@@ -6,13 +6,19 @@ import * as style from './style'
 
 
 const Home = () => {
-  
+
   const recentlyOpen = [
-    {id: 0, name: "App Proyect", created: "20.02.2020", open: 2},
-    {id: 1, name: "Project: fitbit", created: "28.02.2020", open: 2},
-    {id: 2, name: "Client Documents", created: "4.03.2020", open: 4},
+    { id: 0, name: "App Proyect", created: "20.02.2020", open: 2 },
+    { id: 1, name: "Project: fitbit", created: "28.02.2020", open: 2 },
+    { id: 2, name: "Client Documents", created: "4.03.2020", open: 4 },
   ]
-  
+  const recentlyFyles = [
+    { id: 0, name: "Travel Landing Page", members: 5, last_modified: "Mar 8, 2020", color: BaseColor.orangePrimaryColor },
+    { id: 1, name: "True Photos", members: 12, last_modified: "Mar 8, 2020", color: BaseColor.greenPrimaryColor},
+    { id: 2, name: "Dashboard Structure", members: 10, last_modified: "Mar 9, 2020", color: BaseColor.redPrimaryColor},
+    { id: 3, name: "Character Illustration", members: 3, last_modified: "Mar 10, 2020", color: BaseColor.orangePrimaryColor},
+  ]
+
   return (
     <style.Content>
       <Rectangule backgroundColor={BaseColor.whiteColor} borderColor='transparent'
@@ -42,14 +48,22 @@ const Home = () => {
         </style.View>
       </style.View>
 
-      <style.View style={{flexFlow: 'row wrap'}}>
-          {
-            recentlyOpen.map((item, index) =>{
-              return(
-                <RecentlyCard data={item}/>
-              )
-            })
-          }
+      <style.View style={{ flexFlow: 'row wrap' }}>
+        {
+          recentlyOpen.map((item, index) => {
+            return (
+              <RecentlyCard data={item} />
+            )
+          })
+        }
+      </style.View>
+      <style.View style={{justifyContent:'space-between'}}>
+        <Text color={BaseColor.primaryColor} size={20}>
+          Recent Files
+        </Text>
+        <Text color={BaseColor.primaryColor} size={12}>
+          View All
+        </Text>
       </style.View>
     </style.Content>
   )

@@ -9,10 +9,15 @@ const BlueColor = {
     bluePrimaryColor: "#689FF8"
 }
 
+const RedColor ={ 
+    redPrimaryColor: "#FF6860"
+}
+
 const BaseColor = {
     ...GreenColor,
     ...OrangeColor,
     ...BlueColor,
+    ...RedColor,
     primaryColor: "#343951",
     whiteColor: "#FFFFFF",
     grayColor: "#C4C4C4",
