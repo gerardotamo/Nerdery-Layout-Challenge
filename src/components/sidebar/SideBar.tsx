@@ -12,6 +12,8 @@ import { RiGalleryUploadFill } from 'react-icons/ri';
 import { FaFolderPlus } from 'react-icons/fa';
 import { CgMore } from 'react-icons/cg';
 import { IconType } from 'react-icons';
+import { Rectangule } from '../Rectangule/Rectangule';
+import { BsPlusLg } from 'react-icons/bs';
 
 interface Aux {
   name: string,
@@ -56,10 +58,17 @@ const SideBar = ({ position, handleClick }: Props) => {
         <style.DialogContent >
           <List options={options2} />
         </style.DialogContent>
-        <Button heigth='30px' width='67%' color={BaseColor.orangePrimaryColor}>
-          <Text color={BaseColor.whiteColor} size={10}>
+        <Button heigth='30px' width='67%' color={BaseColor.orangePrimaryColor} style={{ position: 'relative' }}>
+          <Text color={BaseColor.whiteColor} size={10} style={{ marginLeft: '-15px' }}>
             Create New
           </Text>
+          <Rectangule backgroundColor={BaseColor.orangeSecondaryColor} borderColor='transparent'
+            borderRadius={4} height='21px' width='21px' style={{ position: 'absolute', top: 5, right: 0,
+            display: 'flex', justifyContent:'center' , alignItems:'center'
+          }}
+          >
+            <BsPlusLg  color={BaseColor.whiteColor} />
+          </Rectangule>
         </Button>
       </div>
     </style.Content>

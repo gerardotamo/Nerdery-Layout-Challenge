@@ -98,7 +98,7 @@ const Aside = () => {
           <Text size={8} color={BaseColor.inactiveGrayColor} style={{margin:"0px", marginBottom: "10px"}}>
             Upgrade to cloud premium
           </Text>
-          <Button color={BaseColor.orangePrimaryColor} heigth={"20%"} width={"70%"}>
+          <Button color={BaseColor.orangePrimaryColor} heigth={"30px"} width={"70%"}>
             <Text size={10} color={BaseColor.whiteColor}>
               Upgrade Account
             </Text>

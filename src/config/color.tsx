@@ -3,7 +3,9 @@ const GreenColor = {
 }
 const OrangeColor = {
     orangePrimaryColor: "#FF9F00",
+    orangeSecondaryColor: "#FFB233",
     shadowOrangePrimaryColor: "#FFD999"
+    
 }
 const BlueColor = {
     bluePrimaryColor: "#689FF8"

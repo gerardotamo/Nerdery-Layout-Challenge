@@ -47,7 +47,7 @@ export const UpgradeContent = styled.div`
 
 export const GradiantRectangule = styled.div`
     background: linear-gradient(270.15deg, #689FF8 0.15%, #FF6860 54.7%, #FF9F00 99.9%);
-    height: 40%;
+    height: 75px;
     width: 70%;
     border-radius: 11px;
 `;
