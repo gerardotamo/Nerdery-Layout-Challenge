@@ -7,8 +7,7 @@ import List from '../list/List';
 import * as style from './syled'
 import { ImHome, ImFilesEmpty, ImFileEmpty } from 'react-icons/im'
 import { GoFileSymlinkFile, GoGitPullRequest, GoTrashcan } from 'react-icons/go';
-import { GrDocumentUpload } from 'react-icons/gr';
-import { RiGalleryUploadFill } from 'react-icons/ri';
+import { RiGalleryUploadFill, RiFileUploadLine } from 'react-icons/ri';
 import { FaFolderPlus } from 'react-icons/fa';
 import { CgMore } from 'react-icons/cg';
 import { IconType } from 'react-icons';
@@ -35,7 +34,7 @@ const SideBar = ({ position, handleClick }: Props) => {
   ];
 
   const options2: Aux[] = [
-    { name: "Upload files", icon: GrDocumentUpload },
+    { name: "Upload files", icon: RiFileUploadLine },
     { name: "Upload folder", icon: RiGalleryUploadFill },
     { name: "New folder", icon: FaFolderPlus },
     { name: "More", icon: CgMore },
