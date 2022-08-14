@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
-
+import Aside from './components/aside/Aside';
+import SideBar from './components/sidebar/SideBar';
+import Home from './pages/home/Home';
 function App() {
+
+  const [position, setPosition] = useState<number>(0);
+
+  const hanbleClick = (pos : number) => {
+    console.log("ASDASDSAD")
+    setPosition(pos);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='wrapper'>
+      <SideBar position={position} handleClick={hanbleClick}/>
+      <Home />
+      <Aside />
     </div>
+
   );
 }
 
